@@ -283,7 +283,7 @@
                         "Lulusan Pesantren..."
                     </h2>
                     <p class="font-mono text-xs text-neutral-700 leading-relaxed space-y-4">
-                        Enam tahun dihabiskan menempa kepemimpinan dan kemandirian di <strong>Pesantren Modern Misbahul Ulum (2018 - 2026)</strong>. Pengalaman ini memberi saya kedisiplinan dan penguasaan bahasa Arab yang kuat.
+                        Enam tahun dihabiskan menempa kepemimpinan dan kemandirian di <strong>Pesantren Modern Misbahul Ulum (2018 - 2024)</strong>. Pengalaman ini memberi saya kedisiplinan dan penguasaan bahasa Arab yang kuat.
                     </p>
                     <div class="h-px bg-neutral-300 my-4"></div>
                     <p class="font-mono text-xs text-neutral-700 leading-relaxed">
