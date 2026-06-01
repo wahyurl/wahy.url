@@ -407,7 +407,7 @@
                         <img src="{{ asset('image/affinity.png') }}" 
                              alt="Affinity Logo" 
                              class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300"
-                             x-on:error="$el.src = $el.src.includes('assets/') ? 'affinity.png'">
+                             x-on:error="$el.src = $el.src.includes("assets/") ? 'affinity.png'">
                     </div>
                                         <div class="flex justify-between items-start mb-4 pt-2">
                         <span class="bg-neutral-500 text-white font-mono text-[9px] font-bold px-2.5 py-1 rounded border border-black uppercase rotate-[2deg]">Pemula</span>
@@ -761,11 +761,11 @@
            // Lakukan pengecekan ketat apakah data projects berisi sintaks Blade Laravel atau data JSON nyata
             if (rawProjects && rawProjects.trim() !== '') {
                 // Jika data mengandung PHP Blade Tags (berarti belum diproses Laravel), lewati parser JSON
-                if (!rawProjects.includes('<?php')) {
+                if (!rawProjects.includes("<?php")) {
                     try {
                         projectsData = JSON.parse(rawProjects);
                     } catch (e) {
-                        console.warn('Gagal mem-parsing projects JSON dari Laravel.');
+                        console.warn("Gagal mem-parsing projects JSON dari Laravel.");
                     }
                 }
             }
@@ -773,10 +773,10 @@
 
             // Lakukan pengecekan ketat untuk languages
            if (rawLanguages && rawLanguages.trim() !== '') {
-    if (!rawLanguages.includes('<?php')) {
+    if (!rawLanguages.includes("<?php")) {
                         languagesData = JSON.parse(rawLanguages);
                     } catch (e) {
-                        console.warn('Gagal mem-parsing languages JSON dari Laravel.');
+                        console.warn("Gagal mem-parsing languages JSON dari Laravel.");
                     }
                 }
             }
