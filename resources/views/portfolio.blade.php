@@ -772,26 +772,15 @@
             
 
             // Lakukan pengecekan ketat untuk languages
-            if (rawLanguages && rawLanguages.trim() !== '') {
-                if (!rawLanguages.includes('<?php') && !rawLanguages.includes('@{{') && !rawLanguages.includes('{!!')) {
-                    try {
+           if (rawLanguages && rawLanguages.trim() !== '') {
+    if (!rawLanguages.includes('<?php')) {
                         languagesData = JSON.parse(rawLanguages);
                     } catch (e) {
                         console.warn('Gagal mem-parsing languages JSON dari Laravel.');
                     }
                 }
             }
-            Alpine.data('portfolioData', () => ({
-             mobileMenuOpen:false,
-                    activeTab:'all',
-                    selectedProject:null,
-                    senderName:'',
-                    formSuccess:false,
-
-                    projects: @json($projects),
-                    languages: @json($languages)
-                }))
-
+         
             if (projectsData.length === 0) {
                 projectsData = [
                     {
