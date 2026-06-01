@@ -769,7 +769,7 @@
                     }
                 }
             }
-            }
+            
 
             // Lakukan pengecekan ketat untuk languages
             if (rawLanguages && rawLanguages.trim() !== '') {
