@@ -758,15 +758,17 @@
             let rawLanguages = store ? store.getAttribute('data-languages') : '';
 
             // Lakukan pengecekan ketat apakah data projects berisi sintaks Blade Laravel atau data JSON nyata
+           // Lakukan pengecekan ketat apakah data projects berisi sintaks Blade Laravel atau data JSON nyata
             if (rawProjects && rawProjects.trim() !== '') {
                 // Jika data mengandung PHP Blade Tags (berarti belum diproses Laravel), lewati parser JSON
-                if (!rawProjects.includes('<?php') && !rawProjects.includes('@{{') && !rawProjects.includes('{!!')) {
+                if (!rawProjects.includes('<?php')) {
                     try {
                         projectsData = JSON.parse(rawProjects);
                     } catch (e) {
                         console.warn('Gagal mem-parsing projects JSON dari Laravel.');
                     }
                 }
+            }
             }
 
             // Lakukan pengecekan ketat untuk languages
