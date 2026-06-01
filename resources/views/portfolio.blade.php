@@ -760,7 +760,7 @@
             // Lakukan pengecekan ketat apakah data projects berisi sintaks Blade Laravel atau data JSON nyata
             if (rawProjects && rawProjects.trim() !== '') {
                 // Jika data mengandung PHP Blade Tags (berarti belum diproses Laravel), lewati parser JSON
-                if (!rawProjects.includes('<?php') && !rawProjects.includes('{{') && !rawProjects.includes('{!!')) {
+                if (!rawProjects.includes('<?php') && !rawProjects.includes('@{{') && !rawProjects.includes('{!!')) {
                     try {
                         projectsData = JSON.parse(rawProjects);
                     } catch (e) {
@@ -771,7 +771,7 @@
 
             // Lakukan pengecekan ketat untuk languages
             if (rawLanguages && rawLanguages.trim() !== '') {
-                if (!rawLanguages.includes('<?php') && !rawLanguages.includes('{{') && !rawLanguages.includes('{!!')) {
+                if (!rawLanguages.includes('<?php') && !rawLanguages.includes('@{{') && !rawLanguages.includes('{!!')) {
                     try {
                         languagesData = JSON.parse(rawLanguages);
                     } catch (e) {
